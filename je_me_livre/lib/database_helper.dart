@@ -21,8 +21,9 @@ class DatabaseHelper {
     final path = join(documentsDirectory.path, 'library.db');
     return await openDatabase(
       path,
-      version: 1,
+      version: 2, 
       onCreate: _onCreate,
+      onUpgrade: _onUpgrade, 
     );
   }
 
@@ -32,9 +33,21 @@ class DatabaseHelper {
         id INTEGER PRIMARY KEY,
         title TEXT,
         author TEXT,
-        genre TEXT
+        description TEXT,
+        disponible INTEGER
       )
     ''');
+  }
+
+  Future<void> _onUpgrade(Database db, int oldVersion, int newVersion) async {
+    if (oldVersion < 2) {
+      await db.execute('''
+        ALTER TABLE books ADD COLUMN description TEXT;
+      ''');
+      await db.execute('''
+        ALTER TABLE books ADD COLUMN disponible INTEGER;
+      ''');
+    }
   }
 
   Future<int> insertBook(Map<String, dynamic> row) async {

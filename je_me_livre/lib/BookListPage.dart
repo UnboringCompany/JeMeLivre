@@ -1,3 +1,5 @@
+import 'dart:convert';
+import 'package:flutter/services.dart';
 import 'package:flutter/material.dart';
 import 'package:je_me_livre/BookDetailPage.dart';
 import 'database_helper.dart';
@@ -15,6 +17,7 @@ class _BookListScreenState extends State<BookListPage> {
   void initState() {
     super.initState();
     _loadBooks();
+    _loadBooksFromJson();
   }
 
   Future<void> _loadBooks() async {
@@ -24,16 +27,31 @@ class _BookListScreenState extends State<BookListPage> {
     });
   }
 
+  Future<void> _loadBooksFromJson() async {
+    final jsonString = await rootBundle.loadString('assets/MesLivres.json');
+    final jsonData = jsonDecode(jsonString);
+
+    for (var book in jsonData) {
+      final row = {
+        'title': book['title'],
+        'author': book['author'],
+        'description': book['description'],
+        'disponible': book['disponible'] ? 1 : 0,
+      };
+      await _dbHelper.insertBook(row);
+    }
+
+    _loadBooks();
+  }
+
   Future<void> _addBook() async {
     final title = await _showInputDialog('Title');
     final author = await _showInputDialog('Author');
-    final genre = await _showInputDialog('Genre');
 
-    if (title != null && author != null && genre != null) {
+    if (title != null && author != null) {
       final row = {
         'title': title,
         'author': author,
-        'genre': genre,
       };
       await _dbHelper.insertBook(row);
       _loadBooks();
@@ -65,6 +83,32 @@ class _BookListScreenState extends State<BookListPage> {
       },
     );
   }
+    Future<void> _showDeleteConfirmationDialog(int bookId) async {
+    final shouldDelete = await showDialog<bool>(
+      context: context,
+      builder: (context) {
+        return AlertDialog(
+          title: Text('Confirm Deletion'),
+          content: Text('Are you sure you want to delete this book?'),
+          actions: [
+            TextButton(
+              onPressed: () => Navigator.pop(context, false),
+              child: Text('Cancel'),
+            ),
+            TextButton(
+              onPressed: () => Navigator.pop(context, true),
+              child: Text('Delete'),
+            ),
+          ],
+        );
+      },
+    );
+
+    if (shouldDelete == true) {
+      await _dbHelper.deleteBook(bookId);
+      _loadBooks();
+    }
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -78,7 +122,7 @@ class _BookListScreenState extends State<BookListPage> {
           final book = _books[index];
           return ListTile(
             title: Text(book['title']),
-            subtitle: Text('${book['author']} - ${book['genre']}'),
+            subtitle: Text('${book['author']}'),
             onTap: () {
               Navigator.push(
                 context,
@@ -88,8 +132,7 @@ class _BookListScreenState extends State<BookListPage> {
               );
             },
             onLongPress: () async {
-              await _dbHelper.deleteBook(book['id']);
-              _loadBooks();
+              await _showDeleteConfirmationDialog(book['id']);
             },
           );
         },
@@ -101,3 +144,4 @@ class _BookListScreenState extends State<BookListPage> {
     );
   }
 }
+
