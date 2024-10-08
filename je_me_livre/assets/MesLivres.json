@@ -1,0 +1,345 @@
+[
+    {
+      "title": "Percy Jackson : Le Voleur de Foudre",
+      "author": "Rick Riordan",
+      "description": "Percy découvre qu'il est le fils d'un dieu grec et part en quête pour empêcher une guerre entre les dieux.",
+      "disponible": true
+    },
+    {
+      "title": "Percy Jackson : La Mer des Monstres",
+      "author": "Rick Riordan",
+      "description": "Percy et ses amis naviguent à travers des eaux dangereuses pour trouver la Toison d'Or et sauver leur camp.",
+      "disponible": true
+    },
+    {
+      "title": "Percy Jackson : Le Sort du Titan",
+      "author": "Rick Riordan",
+      "description": "Percy et ses amis doivent sauver la déesse Artémis tout en affrontant des créatures mythologiques.",
+      "disponible": true
+    },
+    {
+      "title": "Percy Jackson : La Bataille du Labyrinthe",
+      "author": "Rick Riordan",
+      "description": "Percy et Annabeth explorent un labyrinthe pour arrêter les forces de Cronos d'envahir le camp.",
+      "disponible": true
+    },
+    {
+      "title": "Percy Jackson : Le Dernier Olympien",
+      "author": "Rick Riordan",
+      "description": "Percy mène la dernière bataille pour protéger l'Olympe contre les titans.",
+      "disponible": true
+    },
+    {
+      "title": "Harry Potter à l'école des sorciers",
+      "author": "J.K. Rowling",
+      "description": "Harry découvre qu'il est un sorcier et commence sa première année à Poudlard.",
+      "disponible": true
+    },
+    {
+      "title": "Harry Potter et la Chambre des Secrets",
+      "author": "J.K. Rowling",
+      "description": "Harry doit résoudre le mystère d'une série d'attaques dans son école.",
+      "disponible": true
+    },
+    {
+      "title": "Harry Potter et le Prisonnier d'Azkaban",
+      "author": "J.K. Rowling",
+      "description": "Harry découvre la vérité sur un dangereux fugitif et ses liens avec sa propre famille.",
+      "disponible": true
+    },
+    {
+      "title": "Harry Potter et la Coupe de Feu",
+      "author": "J.K. Rowling",
+      "description": "Harry participe à un tournoi légendaire tout en affrontant une menace grandissante.",
+      "disponible": true
+    },
+    {
+      "title": "Harry Potter et l'Ordre du Phénix",
+      "author": "J.K. Rowling",
+      "description": "Harry se prépare à la guerre contre Voldemort alors que l'Ordre du Phénix se reforme.",
+      "disponible": true
+    },
+    {
+      "title": "Harry Potter et le Prince de Sang-Mêlé",
+      "author": "J.K. Rowling",
+      "description": "Harry apprend plus sur le passé de Voldemort et se prépare pour la bataille finale.",
+      "disponible": true
+    },
+    {
+      "title": "Harry Potter et les Reliques de la Mort",
+      "author": "J.K. Rowling",
+      "description": "Harry, Ron et Hermione cherchent les reliques pour détruire Voldemort une fois pour toutes.",
+      "disponible": true
+    },
+    {
+      "title": "L'Assassin Royal : L'Apprenti Assassin",
+      "author": "Robin Hobb",
+      "description": "Fitz, un bâtard royal, est formé comme assassin dans un monde plein de trahisons et de magie.",
+      "disponible": true
+    },
+    {
+      "title": "L'Assassin Royal : L'Assassin du Roi",
+      "author": "Robin Hobb",
+      "description": "Fitz se retrouve pris dans des intrigues politiques et des complots dangereux.",
+      "disponible": true
+    },
+    {
+      "title": "L'Assassin Royal : La Nef du Crépuscule",
+      "author": "Robin Hobb",
+      "description": "Fitz doit choisir entre sa loyauté envers le roi et son propre désir de liberté.",
+      "disponible": true
+    },
+    {
+      "title": "L'Assassin Royal : Le Poison de la vengeance",
+      "author": "Robin Hobb",
+      "description": "Fitz revient d'entre les morts pour se venger de ceux qui l'ont trahi.",
+      "disponible": true
+    },
+    {
+      "title": "L'Assassin Royal : La voie magique",
+      "author": "Robin Hobb",
+      "description": "Fitz doit maîtriser ses pouvoirs magiques tout en faisant face à de nouveaux ennemis.",
+      "disponible": true
+    },
+    {
+      "title": "Hunger Games",
+      "author": "Suzanne Collins",
+      "description": "Katniss Everdeen se porte volontaire pour participer à un combat à mort télévisé.",
+      "disponible": true
+    },
+    {
+      "title": "Hunger Games : L'Embrasement",
+      "author": "Suzanne Collins",
+      "description": "Katniss devient le symbole de la rébellion contre le Capitole.",
+      "disponible": true
+    },
+    {
+      "title": "Hunger Games : La Révolte",
+      "author": "Suzanne Collins",
+      "description": "Katniss mène la rébellion finale contre le Capitole pour libérer Panem.",
+      "disponible": true
+    },
+    {
+      "title": "Le Seigneur des Anneaux : La Communauté de l'Anneau",
+      "author": "J.R.R. Tolkien",
+      "description": "Frodon Baggins se lance dans une quête périlleuse pour détruire l'Anneau Unique.",
+      "disponible": true
+    },
+    {
+      "title": "Le Seigneur des Anneaux : Les Deux Tours",
+      "author": "J.R.R. Tolkien",
+      "description": "La Communauté est divisée, et Frodon continue son voyage vers le Mordor.",
+      "disponible": true
+    },
+    {
+      "title": "Le Seigneur des Anneaux : Le Retour du Roi",
+      "author": "J.R.R. Tolkien",
+      "description": "La bataille finale pour la Terre du Milieu approche alors que Frodon atteint le Mordor.",
+      "disponible": true
+    },
+    {
+      "title": "Le Hobbit",
+      "author": "J.R.R. Tolkien",
+      "description": "Bilbo Baggins part à l'aventure pour aider des nains à récupérer leur trésor volé.",
+      "disponible": true
+    },
+    {
+      "title": "Eragon",
+      "author": "Christopher Paolini",
+      "description": "Un jeune garçon découvre qu'il est destiné à devenir un Dragonnier pour sauver son monde.",
+      "disponible": true
+    },
+    {
+      "title": "Le Trône de Fer : Le Trône de Fer",
+      "author": "George R.R. Martin",
+      "description": "La lutte pour le trône du royaume de Westeros commence, pleine de complots et de batailles.",
+      "disponible": true
+    },
+    {
+      "title": "Le Trône de Fer : A Clash of Kings",
+      "author": "George R.R. Martin",
+      "description": "Les maisons nobles s'affrontent dans une guerre civile pour la domination de Westeros.",
+      "disponible": true
+    },
+    {
+      "title": "Le Trône de Fer : A Storm of Swords",
+      "author": "George R.R. Martin",
+      "description": "Le chaos grandit alors que de nouveaux prétendants se joignent à la bataille pour le trône.",
+      "disponible": true
+    },
+    {
+      "title": "Le Trône de Fer : A Feast for Crows",
+      "author": "George R.R. Martin",
+      "description": "Les conséquences de la guerre affectent les différents royaumes et factions.",
+      "disponible": true
+    },
+    {
+      "title": "Le Trône de Fer : A Dance with Dragons",
+      "author": "George R.R. Martin",
+      "description": "De nouveaux joueurs émergent et des alliances inattendues se forment pour le pouvoir.",
+      "disponible": true
+    },
+    {
+      "title": "Dune",
+      "author": "Frank Herbert",
+      "description": "Paul Atréides doit prendre en main son destin et celui du désert pour sauver son peuple.",
+      "disponible": true
+    },
+    {
+      "title": "Le Nom du Vent",
+      "author": "Patrick Rothfuss",
+      "description": "Kvothe, un légendaire héros, raconte son histoire de survie, d'amour et de magie.",
+      "disponible": true
+    },
+    {
+      "title": "Le Prince Cruel",
+      "author": "Holly Black",
+      "description": "Jude, une mortelle, tente de s'imposer dans le dangereux monde des fées.",
+      "disponible": true
+    },
+    {
+      "title": "Six of Crows",
+      "author": "Leigh Bardugo",
+      "description": "Six hors-la-loi se lancent dans un casse impossible dans un monde fantastique.",
+      "disponible": true
+    },
+    {
+      "title": "La Cité des Ténèbres : La Coupe Mortelle",
+      "author": "Cassandra Clare",
+      "description": "Clary découvre qu'elle fait partie d'un monde de chasseurs de démons.",
+      "disponible": true
+    },
+    {
+      "title": "La Cité des Ténèbres : La Cité des Cendres",
+      "author": "Cassandra Clare",
+      "description": "Clary s'enfonce plus profondément dans la guerre contre les créatures obscures.",
+      "disponible": true
+    },
+    {
+      "title": "La Cité des Ténèbres : La Cité de Verre",
+      "author": "Cassandra Clare",
+      "description": "Clary doit sauver sa mère et empêcher une guerre apocalyptique.",
+      "disponible": true
+    },
+    {
+      "title": "Le Labyrinthe : L'Épreuve",
+      "author": "James Dashner",
+      "description": "Thomas se réveille dans un labyrinthe mortel avec d'autres jeunes sans mémoire.",
+      "disponible": true
+    },
+    {
+      "title": "Le Labyrinthe : La Terre Brûlée",
+      "author": "James Dashner",
+      "description": "Thomas et ses amis affrontent un monde désolé et des ennemis terrifiants pour survivre.",
+      "disponible": true
+    },
+    {
+      "title": "Le Labyrinthe : Le Remède mortel",
+      "author": "James Dashner",
+      "description": "Thomas doit découvrir la vérité derrière les épreuves qu'il a endurées.",
+      "disponible": true
+    },
+    {
+      "title": "Les Chroniques de Narnia : Le Lion, la Sorcière blanche et l'Armoire magique",
+      "author": "C.S. Lewis",
+      "description": "Quatre enfants découvrent un monde magique dirigé par un lion majestueux.",
+      "disponible": true
+    },
+    {
+      "title": "Les Chroniques de Narnia : Le Prince Caspian",
+      "author": "C.S. Lewis",
+      "description": "Les enfants retournent à Narnia pour aider un prince à reprendre son trône.",
+      "disponible": true
+    },
+    {
+      "title": "Les Chroniques de Narnia : L'Odyssée du Passeur d'Aurore",
+      "author": "C.S. Lewis",
+      "description": "Ils embarquent dans un voyage épique à travers les mers de Narnia.",
+      "disponible": true
+    },
+    {
+      "title": "Twilight : Fascination",
+      "author": "Stephenie Meyer",
+      "description": "Bella tombe amoureuse d'un vampire, Edward, et entre dans un monde de dangers.",
+      "disponible": true
+    },
+    {
+      "title": "Twilight : Tentation",
+      "author": "Stephenie Meyer",
+      "description": "Après la séparation d'Edward, Bella cherche réconfort auprès de son ami Jacob.",
+      "disponible": true
+    },
+    {
+      "title": "Twilight : Hésitation",
+      "author": "Stephenie Meyer",
+      "description": "Bella se retrouve au milieu d'un conflit entre vampires et loups-garous.",
+      "disponible": true
+    },
+    {
+      "title": "Twilight : Révélation",
+      "author": "Stephenie Meyer",
+      "description": "Bella et Edward affrontent de nouvelles menaces après leur mariage.",
+      "disponible": true
+    },
+    {
+        "title": "Red Rising",
+        "author": "Pierce Brown",
+        "description": "Darrow, un mineur d'une société dystopique, se rebelle contre un système oppressif pour sauver son peuple.",
+        "disponible": true
+      },
+      {
+        "title": "Golden Son",
+        "author": "Pierce Brown",
+        "description": "Darrow monte dans les rangs de la société Gold tout en complotant la chute du système.",
+        "disponible": true
+      },
+      {
+        "title": "Morning Star",
+        "author": "Pierce Brown",
+        "description": "Darrow mène une rébellion pour renverser les Golds et changer la galaxie.",
+        "disponible": true
+      },
+      {
+        "title": "Iron Gold",
+        "author": "Pierce Brown",
+        "description": "Darrow doit faire face aux conséquences de sa révolution alors que de nouvelles menaces émergent.",
+        "disponible": true
+      },
+      {
+        "title": "Dark Age",
+        "author": "Pierce Brown",
+        "description": "Darrow et ses alliés luttent contre des ennemis impitoyables alors que l'empire sombre dans le chaos.",
+        "disponible": true
+      },
+      {
+        "title": "Le Héros Perdu",
+        "author": "Rick Riordan",
+        "description": "Trois nouveaux demi-dieux se lancent dans une quête pour arrêter un ennemi antique de ressusciter.",
+        "disponible": true
+      },
+      {
+        "title": "Le Fils de Neptune",
+        "author": "Rick Riordan",
+        "description": "Percy Jackson, amnésique, s'associe à deux autres demi-dieux pour affronter de nouveaux dangers.",
+        "disponible": true
+      },
+      {
+        "title": "La Marque d'Athéna",
+        "author": "Rick Riordan",
+        "description": "Les héros grecs et romains doivent travailler ensemble pour empêcher la destruction du monde.",
+        "disponible": true
+      },
+      {
+        "title": "La Maison d'Hadès",
+        "author": "Rick Riordan",
+        "description": "Percy et ses amis descendent aux Enfers pour fermer les Portes de la Mort.",
+        "disponible": true
+      },
+      {
+        "title": "Le Sang de l'Olympe",
+        "author": "Rick Riordan",
+        "description": "Les demi-dieux se battent pour empêcher Gaïa de se réveiller et de détruire le monde.",
+        "disponible": true
+      }
+  ]
+  

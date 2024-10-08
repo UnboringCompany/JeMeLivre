@@ -1,29 +1,13 @@
 import 'package:flutter/material.dart';
+import 'package:je_me_livre/BookDetailPage.dart';
 import 'database_helper.dart';
 
-void main() {
-  runApp(MyApp());
-}
-
-class MyApp extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Personal Library',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
-      home: BookListScreen(),
-    );
-  }
-}
-
-class BookListScreen extends StatefulWidget {
+class BookListPage extends StatefulWidget {
   @override
   _BookListScreenState createState() => _BookListScreenState();
 }
 
-class _BookListScreenState extends State<BookListScreen> {
+class _BookListScreenState extends State<BookListPage> {
   final DatabaseHelper _dbHelper = DatabaseHelper();
   List<Map<String, dynamic>> _books = [];
 
@@ -86,7 +70,7 @@ class _BookListScreenState extends State<BookListScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Personal Library'),
+        title: Text('Library'),
       ),
       body: ListView.builder(
         itemCount: _books.length,
@@ -95,6 +79,14 @@ class _BookListScreenState extends State<BookListScreen> {
           return ListTile(
             title: Text(book['title']),
             subtitle: Text('${book['author']} - ${book['genre']}'),
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => BookDetailPage(book: book),
+                ),
+              );
+            },
             onLongPress: () async {
               await _dbHelper.deleteBook(book['id']);
               _loadBooks();
