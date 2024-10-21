@@ -83,7 +83,8 @@ class _BookListScreenState extends State<BookListPage> {
       },
     );
   }
-    Future<void> _showDeleteConfirmationDialog(int bookId) async {
+
+  Future<void> _showDeleteConfirmationDialog(int bookId) async {
     final shouldDelete = await showDialog<bool>(
       context: context,
       builder: (context) {
@@ -110,27 +111,73 @@ class _BookListScreenState extends State<BookListPage> {
     }
   }
 
+  Future<void> _deleteAllBooks() async {
+    final shouldDelete = await showDialog<bool>(
+      context: context,
+      builder: (context) {
+        return AlertDialog(
+          title: Text('Confirm Deletion'),
+          content: Text('Are you sure you want to delete all books?'),
+          actions: [
+            TextButton(
+              onPressed: () => Navigator.pop(context, false),
+              child: Text('Cancel'),
+            ),
+            TextButton(
+              onPressed: () => Navigator.pop(context, true),
+              child: Text('Delete'),
+            ),
+          ],
+        );
+      },
+    );
+
+    if (shouldDelete == true) {
+      await _dbHelper.deleteAllBooks();
+      _loadBooks();
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         title: Text('Library'),
+        actions: [
+          IconButton(
+            icon: Icon(Icons.delete),
+            onPressed: _deleteAllBooks,
+          ),
+        ],
       ),
       body: ListView.builder(
         itemCount: _books.length,
         itemBuilder: (context, index) {
           final book = _books[index];
+          final isReserved = book['disponible'] == 0;
           return ListTile(
-            title: Text(book['title']),
-            subtitle: Text('${book['author']}'),
-            onTap: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(
-                  builder: (context) => BookDetailPage(book: book),
-                ),
-              );
-            },
+            title: Text(
+              book['title'],
+              style: TextStyle(
+                color: isReserved ? Colors.grey : Colors.black,
+              ),
+            ),
+            subtitle: Text(
+              '${book['author']}',
+              style: TextStyle(
+                color: isReserved ? Colors.grey : Colors.black,
+              ),
+            ),
+            onTap: isReserved
+                ? null
+                : () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => BookDetailPage(book: book),
+                      ),
+                    );
+                  },
             onLongPress: () async {
               await _showDeleteConfirmationDialog(book['id']);
             },
@@ -144,4 +191,6 @@ class _BookListScreenState extends State<BookListPage> {
     );
   }
 }
+
+
 

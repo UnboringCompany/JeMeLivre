@@ -56,7 +56,7 @@ class _HomeScreenState extends State<HomeScreen> {
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.history),
-            label: 'Reservation History',
+            label: 'Reservation',
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.book),

@@ -23,7 +23,7 @@ class HomePage extends StatelessWidget {
                 MaterialPageRoute(builder: (context) => ReservationHistoryPage()),
               );
             },
-            child: Text('View Reservation History'),
+            child: Text('View Reservation'),
           ),
           SizedBox(height: 10),
           ElevatedButton(
