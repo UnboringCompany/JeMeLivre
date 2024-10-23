@@ -18,7 +18,8 @@ class _BookDetailPageState extends State<BookDetailPage> {
     final isAvailable = widget.book['disponible'] == 1;
     final reservationStartDate = isAvailable ? DateTime.now().toString() : null;
 
-    await _dbHelper.updateBookAvailability(bookId, !isAvailable, reservationStartDate);
+    await _dbHelper.updateBookAvailability(
+        bookId, !isAvailable, reservationStartDate);
 
     setState(() {
       widget.book['disponible'] = isAvailable ? 0 : 1;
@@ -39,23 +40,25 @@ class _BookDetailPageState extends State<BookDetailPage> {
           children: [
             Text(
               'Title: ${widget.book['title']}',
-              style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+              style: const TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
             ),
-            SizedBox(height: 10),
+            const SizedBox(height: 10),
             Text(
               'Author: ${widget.book['author']}',
-              style: TextStyle(fontSize: 18),
+              style: const TextStyle(fontSize: 18),
             ),
-            SizedBox(height: 10),
+            const SizedBox(height: 10),
             Text(
               'Description: ${widget.book['description']}',
-              style: TextStyle(fontSize: 18),
+              style: const TextStyle(fontSize: 18),
             ),
-            SizedBox(height: 20),
+            const SizedBox(height: 20),
             ElevatedButton(
               onPressed: _toggleReservation,
               child: Text(
-                widget.book['disponible'] == 1 ? 'Reserve' : 'Cancel Reservation',
+                widget.book['disponible'] == 1
+                    ? 'Reserve'
+                    : 'Cancel Reservation',
               ),
             ),
           ],
@@ -64,6 +67,3 @@ class _BookDetailPageState extends State<BookDetailPage> {
     );
   }
 }
-
-
-
