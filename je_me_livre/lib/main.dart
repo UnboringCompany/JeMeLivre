@@ -31,7 +31,7 @@ class _HomeScreenState extends State<HomeScreen> {
   int _selectedIndex = 0;
 
   final List<Widget> _pages = [
-    HomePage(),
+    // HomePage(),
     ReservationHistoryPage(),
     BookListPage(),
   ];
@@ -46,27 +46,38 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Personal Library'),
+        title: Text(
+          'Personal Library',
+          style: TextStyle(
+            color: Colors.black, // Texte noir pour un meilleur contraste
+          ),
+        ),
+        backgroundColor:
+            Color(0xFFD2B48C), // Marron clair en accord avec le bois
+        elevation: 0, // Pas d'ombre sous l'AppBar
       ),
       body: _pages[_selectedIndex],
       bottomNavigationBar: BottomNavigationBar(
         items: const <BottomNavigationBarItem>[
+          // BottomNavigationBarItem(
+          //   icon: Icon(Icons.home),
+          //   label: 'Home',
+          // ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.home),
-            label: 'Home',
+            icon: Icon(Icons.book),
+            label: 'Library',
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.history),
             label: 'Reservation',
           ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.book),
-            label: 'Library',
-          ),
         ],
         currentIndex: _selectedIndex,
         selectedItemColor: Colors.blue,
         onTap: _onItemTapped,
+        backgroundColor:
+            Color(0xFFD2B48C), // Marron clair en accord avec le bois
+        elevation: 0, // Pas d'ombre sous l'AppBar
       ),
     );
   }

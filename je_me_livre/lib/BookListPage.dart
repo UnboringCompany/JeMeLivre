@@ -111,32 +111,32 @@ class _BookListScreenState extends State<BookListPage> {
     }
   }
 
-  Future<void> _deleteAllBooks() async {
-    final shouldDelete = await showDialog<bool>(
-      context: context,
-      builder: (context) {
-        return AlertDialog(
-          title: Text('Confirm Deletion'),
-          content: Text('Are you sure you want to delete all books?'),
-          actions: [
-            TextButton(
-              onPressed: () => Navigator.pop(context, false),
-              child: Text('Cancel'),
-            ),
-            TextButton(
-              onPressed: () => Navigator.pop(context, true),
-              child: Text('Delete'),
-            ),
-          ],
-        );
-      },
-    );
+  // Future<void> _deleteAllBooks() async {
+  //   final shouldDelete = await showDialog<bool>(
+  //     context: context,
+  //     builder: (context) {
+  //       return AlertDialog(
+  //         title: Text('Confirm Deletion'),
+  //         content: Text('Are you sure you want to delete all books?'),
+  //         actions: [
+  //           TextButton(
+  //             onPressed: () => Navigator.pop(context, false),
+  //             child: Text('Cancel'),
+  //           ),
+  //           TextButton(
+  //             onPressed: () => Navigator.pop(context, true),
+  //             child: Text('Delete'),
+  //           ),
+  //         ],
+  //       );
+  //     },
+  //   );
 
-    if (shouldDelete == true) {
-      await _dbHelper.deleteAllBooks();
-      _loadBooks();
-    }
-  }
+  //   if (shouldDelete == true) {
+  //     await _dbHelper.deleteAllBooks();
+  //     _loadBooks();
+  //   }
+  // }
 
   @override
   Widget build(BuildContext context) {
@@ -163,12 +163,12 @@ class _BookListScreenState extends State<BookListPage> {
         backgroundColor:
             Color(0xFFD2B48C), // Marron clair en accord avec le bois
         elevation: 0, // Pas d'ombre sous l'AppBar
-        actions: [
-          IconButton(
-            icon: Icon(Icons.delete, color: Colors.black),
-            onPressed: _deleteAllBooks,
-          ),
-        ],
+        // actions: [
+        //   IconButton(
+        //     icon: Icon(Icons.delete, color: Colors.black),
+        //     onPressed: _deleteAllBooks,
+        //   ),
+        // ],
       ),
       body: Stack(
         children: [
