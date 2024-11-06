@@ -6,6 +6,8 @@ import 'database_helper.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 class BookListPage extends StatefulWidget {
+  const BookListPage({super.key});
+
   @override
   _BookListScreenState createState() => _BookListScreenState();
 }
@@ -220,13 +222,13 @@ class _BookListScreenState extends State<BookListPage> with SingleTickerProvider
 
     return Scaffold(
       appBar: AppBar(
-        title: Text(
+        title: const Text(
           'Bibliothèque',
           style: TextStyle(
             color: Colors.black,
           ),
         ),
-        backgroundColor: Color(0xFFD2B48C),
+        backgroundColor: const Color(0xFFD2B48C),
         elevation: 0,
         // actions: [
         //   IconButton(
@@ -252,7 +254,7 @@ class _BookListScreenState extends State<BookListPage> with SingleTickerProvider
                   onChanged: _filterBooks,
                   decoration: InputDecoration(
                     labelText: 'Rechercher un livre',
-                    prefixIcon: Icon(Icons.search),
+                    prefixIcon: const Icon(Icons.search),
                     border: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(25.0),
                     ),
@@ -275,7 +277,7 @@ class _BookListScreenState extends State<BookListPage> with SingleTickerProvider
                               padding: const EdgeInsets.only(left: 16.0),
                               child: Text(
                                 author,
-                                style: TextStyle(
+                                style: const TextStyle(
                                   fontSize: 18,
                                   fontWeight: FontWeight.bold,
                                   color: Colors.black,

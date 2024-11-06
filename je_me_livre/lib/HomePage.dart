@@ -3,29 +3,31 @@ import 'database_helper.dart';
 import 'BookListPage.dart';
 import 'ReservationHistoryPage.dart';
 
-
 class HomePage extends StatelessWidget {
+  const HomePage({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Center(
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          Text(
+          const Text(
             'Welcome to Personal Library',
             style: TextStyle(fontSize: 24),
           ),
-          SizedBox(height: 20),
+          const SizedBox(height: 20),
           ElevatedButton(
             onPressed: () {
               Navigator.push(
                 context,
-                MaterialPageRoute(builder: (context) => ReservationHistoryPage()),
+                MaterialPageRoute(
+                    builder: (context) => ReservationHistoryPage()),
               );
             },
-            child: Text('View Reservation'),
+            child: const Text('View Reservation'),
           ),
-          SizedBox(height: 10),
+          const SizedBox(height: 10),
           ElevatedButton(
             onPressed: () {
               Navigator.push(
@@ -33,7 +35,7 @@ class HomePage extends StatelessWidget {
                 MaterialPageRoute(builder: (context) => BookListPage()),
               );
             },
-            child: Text('View Library'),
+            child: const Text('View Library'),
           ),
         ],
       ),

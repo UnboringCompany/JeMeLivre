@@ -1,6 +1,4 @@
-import 'dart:convert';
 import 'dart:io';
-import 'package:flutter/services.dart';
 import 'package:path/path.dart';
 import 'package:path_provider/path_provider.dart';
 import 'package:sqflite/sqflite.dart';
@@ -102,17 +100,19 @@ class DatabaseHelper {
 
   Future<bool> isTableEmpty() async {
     final db = await database;
-    final count = Sqflite.firstIntValue(await db.rawQuery('SELECT COUNT(*) FROM books'));
+    final count =
+        Sqflite.firstIntValue(await db.rawQuery('SELECT COUNT(*) FROM books'));
     return count == 0;
   }
 
-  Future<int> updateBookAvailability(int bookId, bool isAvailable, String? datereservation) async {
+  Future<int> updateBookAvailability(
+      int bookId, bool isAvailable, String? datereservation) async {
     final db = await database;
     return await db.update(
       'books',
       {
-      'disponible': isAvailable ? 1 : 0,
-      'reservation_start_date': datereservation,
+        'disponible': isAvailable ? 1 : 0,
+        'reservation_start_date': datereservation,
       },
       where: 'id = ?',
       whereArgs: [bookId],
@@ -124,6 +124,3 @@ class DatabaseHelper {
     return await db.query('books', where: 'disponible = ?', whereArgs: [0]);
   }
 }
-
-
-

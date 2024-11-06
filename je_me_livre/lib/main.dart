@@ -9,6 +9,8 @@ void main() {
 }
 
 class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -23,6 +25,8 @@ class MyApp extends StatelessWidget {
 }
 
 class HomeScreen extends StatefulWidget {
+  const HomeScreen({super.key});
+
   @override
   _HomeScreenState createState() => _HomeScreenState();
 }
@@ -46,14 +50,14 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(
+        title: const Text(
           'Personal Library',
           style: TextStyle(
             color: Colors.black, // Texte noir pour un meilleur contraste
           ),
         ),
         backgroundColor:
-            Color(0xFFD2B48C), // Marron clair en accord avec le bois
+            const Color(0xFFD2B48C), // Marron clair en accord avec le bois
         elevation: 0, // Pas d'ombre sous l'AppBar
       ),
       body: _pages[_selectedIndex],
@@ -76,7 +80,7 @@ class _HomeScreenState extends State<HomeScreen> {
         selectedItemColor: const Color.fromARGB(255, 250, 237, 247),
         onTap: _onItemTapped,
         backgroundColor:
-            Color(0xFFD2B48C), // Marron clair en accord avec le bois
+            const Color(0xFFD2B48C), // Marron clair en accord avec le bois
         elevation: 0, // Pas d'ombre sous l'AppBar
       ),
     );
