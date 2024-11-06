@@ -32,8 +32,8 @@ class _HomeScreenState extends State<HomeScreen> {
 
   final List<Widget> _pages = [
     // HomePage(),
-    ReservationHistoryPage(),
     BookListPage(),
+    ReservationHistoryPage(),
   ];
 
   void _onItemTapped(int index) {
@@ -73,7 +73,7 @@ class _HomeScreenState extends State<HomeScreen> {
           ),
         ],
         currentIndex: _selectedIndex,
-        selectedItemColor: Colors.blue,
+        selectedItemColor: const Color.fromARGB(255, 250, 237, 247),
         onTap: _onItemTapped,
         backgroundColor:
             Color(0xFFD2B48C), // Marron clair en accord avec le bois
