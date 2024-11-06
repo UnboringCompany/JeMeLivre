@@ -3,6 +3,8 @@ import 'database_helper.dart';
 import 'BookDetailPage.dart';
 
 class ReservationHistoryPage extends StatefulWidget {
+  const ReservationHistoryPage({super.key});
+
   @override
   _ReservationHistoryPageState createState() => _ReservationHistoryPageState();
 }
@@ -41,12 +43,12 @@ class _ReservationHistoryPageState extends State<ReservationHistoryPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(
+        title: const Text(
           'Réservation',
           style: TextStyle(color: Colors.black),
         ),
         backgroundColor:
-            Color(0xFFD2B48C), // Marron clair pour s'accorder au bois
+            const Color(0xFFD2B48C), // Marron clair pour s'accorder au bois
         elevation: 0,
       ),
       body: Stack(
@@ -67,7 +69,7 @@ class _ReservationHistoryPageState extends State<ReservationHistoryPage> {
                   onChanged: _filterReservedBooks,
                   decoration: InputDecoration(
                     labelText: 'Rechercher une réservation',
-                    prefixIcon: Icon(Icons.search),
+                    prefixIcon: const Icon(Icons.search),
                     border: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(25.0),
                     ),
@@ -83,12 +85,12 @@ class _ReservationHistoryPageState extends State<ReservationHistoryPage> {
                     return ListTile(
                       title: Text(
                         book['title'],
-                        style: TextStyle(
+                        style: const TextStyle(
                             color: Colors.black, fontWeight: FontWeight.bold),
                       ),
                       subtitle: Text(
                         'Auteur : ${book['author']}\nDate de réservation : ${book['reservation_start_date']}',
-                        style: TextStyle(color: Colors.black87),
+                        style: const TextStyle(color: Colors.black87),
                       ),
                       onTap: () {
                         Navigator.push(

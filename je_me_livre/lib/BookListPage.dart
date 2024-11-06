@@ -5,6 +5,8 @@ import 'package:je_me_livre/BookDetailPage.dart';
 import 'database_helper.dart';
 
 class BookListPage extends StatefulWidget {
+  const BookListPage({super.key});
+
   @override
   _BookListScreenState createState() => _BookListScreenState();
 }
@@ -76,11 +78,11 @@ class _BookListScreenState extends State<BookListPage> {
           actions: [
             TextButton(
               onPressed: () => Navigator.pop(context),
-              child: Text('Cancel'),
+              child: const Text('Cancel'),
             ),
             TextButton(
               onPressed: () => Navigator.pop(context, controller.text),
-              child: Text('OK'),
+              child: const Text('OK'),
             ),
           ],
         );
@@ -113,13 +115,13 @@ class _BookListScreenState extends State<BookListPage> {
 
     return Scaffold(
       appBar: AppBar(
-        title: Text(
+        title: const Text(
           'Bibliothèque',
           style: TextStyle(
             color: Colors.black,
           ),
         ),
-        backgroundColor: Color(0xFFD2B48C),
+        backgroundColor: const Color(0xFFD2B48C),
         elevation: 0,
       ),
       body: Stack(
@@ -140,7 +142,7 @@ class _BookListScreenState extends State<BookListPage> {
                   onChanged: _filterBooks,
                   decoration: InputDecoration(
                     labelText: 'Rechercher un livre',
-                    prefixIcon: Icon(Icons.search),
+                    prefixIcon: const Icon(Icons.search),
                     border: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(25.0),
                     ),
@@ -164,7 +166,7 @@ class _BookListScreenState extends State<BookListPage> {
                               padding: const EdgeInsets.only(left: 16.0),
                               child: Text(
                                 author,
-                                style: TextStyle(
+                                style: const TextStyle(
                                   fontSize: 18,
                                   fontWeight: FontWeight.bold,
                                   color: Colors.black,
@@ -194,14 +196,14 @@ class _BookListScreenState extends State<BookListPage> {
                                           },
                                     child: Container(
                                       width: 120,
-                                      margin:
-                                          EdgeInsets.symmetric(horizontal: 8.0),
+                                      margin: const EdgeInsets.symmetric(
+                                          horizontal: 8.0),
                                       decoration: BoxDecoration(
                                         color: isReserved
                                             ? Colors.grey[300]
                                             : Colors.white,
                                         borderRadius: BorderRadius.circular(8),
-                                        boxShadow: [
+                                        boxShadow: const [
                                           BoxShadow(
                                             color: Colors.black12,
                                             blurRadius: 4,
@@ -213,7 +215,7 @@ class _BookListScreenState extends State<BookListPage> {
                                         mainAxisAlignment:
                                             MainAxisAlignment.center,
                                         children: [
-                                          Container(
+                                          SizedBox(
                                             height: 100,
                                             child: Image.asset(
                                               'assets/couverture.png',
@@ -259,7 +261,7 @@ class _BookListScreenState extends State<BookListPage> {
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: _addBook,
-        child: Icon(Icons.add),
+        child: const Icon(Icons.add),
       ),
     );
   }
