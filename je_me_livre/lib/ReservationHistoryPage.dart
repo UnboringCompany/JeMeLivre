@@ -98,7 +98,9 @@ class _ReservationHistoryPageState extends State<ReservationHistoryPage> {
                           MaterialPageRoute(
                             builder: (context) => BookDetailPage(book: book),
                           ),
-                        );
+                        ).then((_) {
+                          _loadReservedBooks();
+                        });
                       },
                     );
                   },

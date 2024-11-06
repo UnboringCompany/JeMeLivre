@@ -12,7 +12,8 @@ class BookListPage extends StatefulWidget {
   _BookListScreenState createState() => _BookListScreenState();
 }
 
-class _BookListScreenState extends State<BookListPage> with SingleTickerProviderStateMixin {
+class _BookListScreenState extends State<BookListPage>
+    with SingleTickerProviderStateMixin {
   final DatabaseHelper _dbHelper = DatabaseHelper();
   List<Map<String, dynamic>> _books = [];
   List<Map<String, dynamic>> _filteredBooks = [];
@@ -90,50 +91,56 @@ class _BookListScreenState extends State<BookListPage> with SingleTickerProvider
   }
 
   Future<String?> _showInputDialog(String label) async {
-  final controller = TextEditingController();
-  return showDialog<String>(
-    context: context,
-    builder: (context) {
-      return AlertDialog(
-        backgroundColor: Color(0xFFD2B48C), // Couleur de fond personnalisée
-        title: Text(
-          'Enter $label',
-          style: TextStyle(
-            color: Color.fromARGB(255, 250, 237, 247), // Couleur du texte
-          ),
-        ),
-        content: TextField(
-          controller: controller,
-          decoration: InputDecoration(
-            labelText: label,
-            labelStyle: TextStyle(
-              color: Color.fromARGB(255, 250, 237, 247), // Couleur du texte du label
+    final controller = TextEditingController();
+    return showDialog<String>(
+      context: context,
+      builder: (context) {
+        return AlertDialog(
+          backgroundColor: Color(0xFFD2B48C), // Couleur de fond personnalisée
+          title: Text(
+            'Enter $label',
+            style: TextStyle(
+              color: Color.fromARGB(255, 250, 237, 247), // Couleur du texte
             ),
           ),
-          style: TextStyle(
-            color: Color.fromARGB(255, 250, 237, 247), // Couleur du texte saisi
-          ),
-        ),
-        actions: [
-          TextButton(
-            onPressed: () => Navigator.pop(context),
-            child: Text(
-              'Cancel',
-              style: TextStyle(color: Color.fromARGB(255, 250, 237, 247)), // Couleur du texte du bouton
+          content: TextField(
+            controller: controller,
+            decoration: InputDecoration(
+              labelText: label,
+              labelStyle: TextStyle(
+                color: Color.fromARGB(
+                    255, 250, 237, 247), // Couleur du texte du label
+              ),
+            ),
+            style: TextStyle(
+              color:
+                  Color.fromARGB(255, 250, 237, 247), // Couleur du texte saisi
             ),
           ),
-          TextButton(
-            onPressed: () => Navigator.pop(context, controller.text),
-            child: Text(
-              'OK',
-              style: TextStyle(color: Color.fromARGB(255, 250, 237, 247)), // Couleur du texte du bouton
+          actions: [
+            TextButton(
+              onPressed: () => Navigator.pop(context),
+              child: Text(
+                'Cancel',
+                style: TextStyle(
+                    color: Color.fromARGB(
+                        255, 250, 237, 247)), // Couleur du texte du bouton
+              ),
             ),
-          ),
-        ],
-      );
-    },
-  );
-}
+            TextButton(
+              onPressed: () => Navigator.pop(context, controller.text),
+              child: Text(
+                'OK',
+                style: TextStyle(
+                    color: Color.fromARGB(
+                        255, 250, 237, 247)), // Couleur du texte du bouton
+              ),
+            ),
+          ],
+        );
+      },
+    );
+  }
 
   void _filterBooks(String text) {
     setState(() {
@@ -306,11 +313,13 @@ class _BookListScreenState extends State<BookListPage> with SingleTickerProvider
         ],
       ),
       floatingActionButton: ScaleTransition(
-        scale: Tween(begin: 1.0, end: 1.2)
-            .animate(CurvedAnimation(parent: _animationController, curve: Curves.easeInOut)),
+        scale: Tween(begin: 1.0, end: 1.2).animate(CurvedAnimation(
+            parent: _animationController, curve: Curves.easeInOut)),
         child: FloatingActionButton(
           onPressed: () {
-            _animationController.reverse().then((value) => _animationController.forward());
+            _animationController
+                .reverse()
+                .then((value) => _animationController.forward());
             _addBook();
           },
           backgroundColor: Color(0xFFD2B48C),
@@ -320,4 +329,3 @@ class _BookListScreenState extends State<BookListPage> with SingleTickerProvider
     );
   }
 }
-
